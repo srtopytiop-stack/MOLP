@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Tajawal';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/tajawal-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/tajawal-bold.woff2') format('woff2');
+}
+
+@layer base {
+  :root {
+    --font-ar: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif;
+    --font-en: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  html[dir="rtl"] {
+    font-family: var(--font-ar);
+  }
+
+  html[dir="ltr"] {
+    font-family: var(--font-en);
+  }
+
+  body {
+    background-color: #07090e;
+    color: #f1f5f9;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom cosmic utility styles */
+.space-grid {
+  background-image: 
+    radial-gradient(rgba(245, 158, 11, 0.08) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px, 16px 16px;
+  background-position: 0 0, 20px 20px;
+}
+
+.accretion-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.15) 0%, rgba(217, 119, 6, 0.05) 45%, transparent 70%);
+}
+
+.accretion-glow-center {
+  background: radial-gradient(circle at center, rgba(245, 158, 11, 0.18) 0%, rgba(180, 83, 9, 0.08) 40%, transparent 75%);
+}
+
+.glass-card {
+  background: rgba(15, 20, 31, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  background: rgba(20, 27, 43, 0.85);
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(245, 158, 11, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes orbitSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.orbit-spin-slow {
+  animation: orbitSpin 30s linear infinite;
+}

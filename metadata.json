@@ -1,0 +1,6 @@
+{
+  "name": "الثقب الأسود | استوديو الأفكار والعقل الاصطناعي",
+  "description": "استوديو ومحرك خلق الأفكار فائق السرعة والموثوقية، مدعوم بعقل اصطناعي يفكر ويخلق الفرص والابتكارات مع حفظ دائم فوري لا يضيع أبداً.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
